@@ -1,0 +1,116 @@
+
+body{
+background-image: url("../img/book-1667826_1920.jpg");
+background-size:cover;
+text-align: center;
+}
+
+.LoginTitle{
+    font-family: 'KoHo', sans-serif;
+}
+
+.login-form {
+    width: 340px;
+    display: inline-block;
+    margin-top: 4em;
+}
+.login-form form {
+ 
+    background: #e2dfe6ed;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.login-form .hint-text {
+    color: #777;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.login-btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-success {
+    color: #eae5e5;
+    background-color: #c38c6c;
+    border-color: #502f23;
+}
+
+.text-success {
+color: #8e442a;
+}
+
+.or-seperator {
+    margin: 20px 0 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+.or-seperator  {
+    margin: 20px 0 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+.social-btn .btn {
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left; 
+    line-height: 24px;       
+}
+.social-btn .btn i {
+    float: left;
+    margin: 4px 15px  0 5px;
+    min-width: 15px;
+}
+.input-group-addon .fa{
+    font-size: 18px;
+}
+#centrador{
+display: flex;
+width: 110px;
+height: 32px;
+justify-content: center;
+align-items: center;
+margin-left: 7em;
+margin-bottom: 2em;
+
+}
+#centrador2{
+    display: flex;
+width: 110px;
+height: 110px;
+justify-content: center;
+align-items: center;
+margin-left: 6em
+}
+
+
+#imagen{
+display: flex;
+width: 100px;
+height: 100px;
+}   
+
+
+.clearfix{
+margin-left: 0.5em;
+margin-top: 0.2em;
+}
+
+.separador{
+    margin: 1.3em 1em;
+}
+
+.Sign-In {
+    margin: 2em 5em;
+}
+
+.forgot{
+    color: #80858a;
+}

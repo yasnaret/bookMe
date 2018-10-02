@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BookMe</title>
+  <link rel="stylesheet" href="css/registro.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="login-form">
+    <!-- Formulario de registro de nuevos usuarios -->
+    <form class="formLogin">
+      <div class="registro">
+        <div class="row-exit">
+          <a href="loginv2.html"> <i class="fa fa-remove"></i></a>
+        </div>
+        <div class="row-register">
+          <h3 class='Register'>Registro</h3>
+        </div>
+      </div>
+      <div class="or-seperator"></div>
+      <div class="form-row">
+        <div class="col-6">
+          <input type="text" id="inputNombre" class="form-control2 " placeholder="Nombre" tabindex="0" data-toggle="popover"
+            data-placement="top" data-trigger="focus" data-content="Aquí tu nombre." required>
+        </div>
+        <div class="col-6">
+          <input type="text" id="inputApellido" class="form-control2 " placeholder="Apellido" data-toggle="popover"
+            data-placement="top" data-trigger="focus" data-content="Aquí tu apellido." required>
+        </div>
+        <div class="col-6">
+          <input type="text" id="inputNickname" class="form-control2 " placeholder="Nickname" tabindex="0" data-toggle="popover"
+            data-placement="top" data-trigger="focus" data-content="Aquí tu nickname." required>
+        </div>
+        <div class="col-6">
+          <select class="form-control" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Debes ingresar tu edad."
+            required></select>
+        </div>
+        <div class="or-seperator"></div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="email" id="inputEmail" class="form-control2 " placeholder="Correo electrónico" data-toggle="popover"
+          data-placement="top" data-trigger="focus" data-content="Escribe una dirección de correo válida." required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="inputPassword" class="form-control2 " placeholder="Contraseña" data-toggle="popover"
+          data-placement="top" data-trigger="focus" data-content="Tu contraseña debe tener al menos 6 carácteres entre letras y números."
+          required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="inputPassword2" class="form-control2 " placeholder="Confirmar contraseña"
+          data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Verifica que tu contraseña coincida con la ingresada arriba"
+          required>
+      </div>
+      <div class="form-check">
+        <label>
+          Al registrarte estás de acuerdo con nuestros <a href="">Términos y condiciones</a>
+        </label>
+      </div>
+      <button type="button" id="btnCrearCuenta" class="btn btn-info " onclick="register()">Crear Mi Cuenta </button>
+    </form>
+  </div>
+  <!-- conexion a Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyC7nuA5-QZDkhNnH6FBxoepllvmtkqDuMo",
+      authDomain: "bookme-78399.firebaseapp.com",
+      databaseURL: "https://bookme-78399.firebaseio.com",
+      projectId: "bookme-78399",
+      storageBucket: "bookme-78399.appspot.com",
+      messagingSenderId: "383280310031"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/loginv2.js"></script>
+  <script src="js/registro.js"></script>
+
+</body>
+
+</html>
