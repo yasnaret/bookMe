@@ -1,7 +1,7 @@
-function donateBook() {
-    location = "/FormularioDatosLibro.html";
+function redirectTodonateBook() {
+    location = "/src/Camili/FormularioDatosLibro.html";
 }
 
-function adoptBook() {
+function redirectToadoptBook() {
     location = "/inserte aqui html de Caro";
 }
