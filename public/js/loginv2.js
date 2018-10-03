@@ -7,7 +7,7 @@ function signIn(){
   .then(function(){
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        window.location.href = 'main.html';
+        window.location.href = 'maps.html';
       }
     });
   })
@@ -33,7 +33,7 @@ function signInWithGoogle(){
             uid: user.uid,
             profilePhoto: user.photoURL
           }).then(user => {
-            window.location.href = 'main.html';
+            window.location.href = 'maps.html';
           });
        
       }).catch(function(error) {
@@ -65,7 +65,7 @@ function signInWithFacebook(){
              profilePhoto: user.photoURL
            }).then(user => {
              console.log ('estas loggeado con fb ')
-             window.location.href = 'main.html';
+             window.location.href = 'maps.html';
            });
         
        }).catch(function(error) {
