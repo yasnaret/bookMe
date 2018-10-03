@@ -102,7 +102,7 @@ searchBtn.addEventListener('click', () => {
   fetch(`https://geocoder.api.here.com/6.2/geocode.json?searchtext=${encodeURI(inputSearching.value)}&mapview=-15.3052%2C-78.6127%3B-56.6682%2C-64.1986&gen=9&app_id=wmLh9WIylelp0l6KdZF9&app_code=vXvdui0ls0FvJ0DrA7PY5g`)
     .then(response => response.json())
     .then(explorer => {
-      placesList = explorer.Response.View[0].Result[0].Location;
+      placesList = explorer.Response.View[0].Result[0].Location.DisplayPosition;
 
       console.log(Object.entries(placesList));
       addInfoBubble(map);
