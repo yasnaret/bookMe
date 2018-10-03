@@ -1,0 +1,29 @@
+body {
+    background-color: antiquewhite;
+}
+
+#NavBar {
+    align-content: center;
+    margin-bottom: 6em;
+    margin-left: 3em;
+}
+
+#NavBox {
+    background-color: antiquewhite;
+}
+
+#DonationForm {
+    align-content: center;
+    margin-left: 5em;
+}
+
+#confirmDonate {
+    padding-right: 6em;
+    padding-left: 6em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+#appName {
+    padding-right: 3em;
+}
