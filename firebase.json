@@ -24,9 +24,5 @@
   },
   "storage": {
     "rules": "storage.rules"
-  },
-  "firestore": {
-    "rules": "y",
-    "indexes": "y"
   }
 }

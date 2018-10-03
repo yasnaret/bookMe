@@ -10,12 +10,9 @@ function addMarkerToGroup(group, coords, html) {
 
 function addInfoBubble(map) {
   addingMarkers();
-  // markers.forEach((marker) => {
-  //   map.removeObjects(markers);
-  // });
+
   markers = [];
-  //recorrer items para la info de los restaurantes
-  // Object.entries(placesList).forEach((item) => {
+
   var group = new H.map.Group();
   console.log(Object.entries(placesList));
   coords = {
