@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "eslint",
     "serve": "firebase serve --only functions",
+    "lint": "eslint",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
@@ -15,8 +16,8 @@
   },
   "private": true,
   "devDependencies": {
-    "eslint": "5.6.1",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.14.0"
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   }
 }
