@@ -15,12 +15,12 @@ function addInfoBubble(map) {
   // });
   markers = [];
   //recorrer items para la info de los restaurantes
-  placesList.results.items.forEach((item) => {
+  Object.entries(placesList).forEach((item) => {
     var group = new H.map.Group();
     console.log(group);
     coords = {
-      lng: item.position[1],
-      lat: item.position[0],
+      lng: item[2][1][1],
+      lat: item[2][0][1],
     };
 
     map.addObject(group);
@@ -40,9 +40,9 @@ function addInfoBubble(map) {
     }, false);
 
     addMarkerToGroup(group, {
-        lat: item.position[0],
-        lng: item.position[1]
+        lng: item[2][1][1],
+        lat: item[2][0][1],
       },
-      `<h4>${item.title}</h4><p>${item.vicinity}</p>`);
+      "<h4>hola</h4>");
   });
 }
