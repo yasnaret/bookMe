@@ -1,11 +1,10 @@
-
 // funcion para Ingresar con usuario y contraseña ya hecho el registro
-function signIn(){
-    let email1=document.getElementById("email1").value;
-    let password1=document.getElementById("password1").value;
+function signIn() {
+    let email1 = document.getElementById("email1").value;
+    let password1 = document.getElementById("password1").value;
     firebase.auth().signInWithEmailAndPassword(email1, password1)
   .then(function(){
-    window.location.href = 'maps.html';
+    window.location.href = 'botonera.html';
   })
    .catch(function(error) {
         var errorCode = error.code;
@@ -15,89 +14,89 @@ function signIn(){
       });
 }
 
-function signInWithGoogle(){
+function signInWithGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
-    .then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        // // The signed-in user info.
-        var user = result.user;
-        firebase.database().ref('users/' + user.uid).set({
-            name: user.displayName,
-            email: user.email,
-            uid: user.uid,
-            profilePhoto: user.photoURL
-          }).then(user => {
-            window.location.href = 'maps.html';
-          });
-       
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-        console.log (error)
-      });
+        .then(function(result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // // The signed-in user info.
+            var user = result.user;
+            firebase.database().ref('users/' + user.uid).set({
+                name: user.displayName,
+                email: user.email,
+                uid: user.uid,
+                profilePhoto: user.photoURL
+            }).then(user => {
+                window.location.href = 'botonera.html';
+            });
+
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+            console.log(error)
+        });
 }
 
-function signInWithFacebook(){
+function signInWithFacebook() {
     var provider = new firebase.auth.FacebookAuthProvider();
     provider.addScope('public_profile');
     firebase.auth().signInWithPopup(provider)
-    .then(function(result) {
-         // This gives you a Google Access Token. You can use it to access the Google API.
-         var token = result.credential.accessToken;
-         // // The signed-in user info.
-         var user = result.user;
-         firebase.database().ref('users/' + user.uid).set({
-             name: user.displayName,
-             email: user.email,
-             uid: user.uid,
-             profilePhoto: user.photoURL
-           }).then(user => {
-             console.log ('estas loggeado con fb ')
-             window.location.href = 'maps.html';
-           });
-        
-       }).catch(function(error) {
-         // Handle Errors here.
-         var errorCode = error.code;
-         var errorMessage = error.message;
-         // The email of the user's account used.
-         var email = error.email;
-         // The firebase.auth.AuthCredential type that was used.
-         var credential = error.credential;
-         // ...
-         console.log (error)
-       });
-    }
-   
+        .then(function(result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // // The signed-in user info.
+            var user = result.user;
+            firebase.database().ref('users/' + user.uid).set({
+                name: user.displayName,
+                email: user.email,
+                uid: user.uid,
+                profilePhoto: user.photoURL
+            }).then(user => {
+                console.log('estas loggeado con fb ')
+                window.location.href = 'botonera.html';
+            });
+
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+            console.log(error)
+        });
+}
 
 
 
 
-function sendPasswordResetEmail(){
-let email1=document.getElementById("email1").value;
-let auth = firebase.auth();
-let  emailAddress =email1;
 
-auth.sendPasswordResetEmail(emailAddress).then(function() {
-  // Email sent.
-}).catch(function(error) {
-  // An error happened.
-});
+function sendPasswordResetEmail() {
+    let email1 = document.getElementById("email1").value;
+    let auth = firebase.auth();
+    let emailAddress = email1;
+
+    auth.sendPasswordResetEmail(emailAddress).then(function() {
+        // Email sent.
+    }).catch(function(error) {
+        // An error happened.
+    });
 }
 
 //(funcionalidad boostrap&jquery)
 $(function() {
     $('[data-toggle="popover"]').popover();
-  });
+});
 
-  $('.popover-dismiss').popover({
+$('.popover-dismiss').popover({
     trigger: 'focus'
-  });
+});
