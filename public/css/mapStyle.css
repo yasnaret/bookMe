@@ -1,14 +1,13 @@
 #mapContainer {
     margin-left: 1em;
     margin-right: 1em;
-    width: 17em;
-    height: 15em;
+    width: 330px;
+    height: 270px;
     position: relative;
 }
 
 #filterInput {
     margin-top: 2em;
-    ;
 }
 
 #title {
@@ -21,6 +20,10 @@
 
 #NavBar {
     align-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     margin-left: 3em;
+}
+
+#appName {
+    padding-right: 3em;
 }
