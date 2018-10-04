@@ -1,3 +1,4 @@
+let  db = firebase.firestore();
 // funcion para Ingresar con usuario y contraseña ya hecho el registro
 function signIn() {
     let email1 = document.getElementById("email1").value;
@@ -18,17 +19,12 @@ function signInWithGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
         .then(function(result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // // The signed-in user info.
-            var user = result.user;
-            firebase.database().ref('users/' + user.uid).set({
+            let user = result.user;
+            db.collection('users').doc(user.uid).collection('datospersonales').add({
                 name: user.displayName,
-                email: user.email,
-                uid: user.uid,
-                profilePhoto: user.photoURL
+                email: user.email
             }).then(user => {
-                window.location.href = 'botonera.html';
+                //window.location.href = 'botonera.html';
             });
 
         }).catch(function(error) {
@@ -49,15 +45,10 @@ function signInWithFacebook() {
     provider.addScope('public_profile');
     firebase.auth().signInWithPopup(provider)
         .then(function(result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // // The signed-in user info.
-            var user = result.user;
-            firebase.database().ref('users/' + user.uid).set({
+            let user = result.user;
+            db.collection('users').doc(user.uid).collection('datospersonales').add({
                 name: user.displayName,
-                email: user.email,
-                uid: user.uid,
-                profilePhoto: user.photoURL
+                email: user.email
             }).then(user => {
                 console.log('estas loggeado con fb ')
                 window.location.href = 'botonera.html';
@@ -75,9 +66,6 @@ function signInWithFacebook() {
             console.log(error)
         });
 }
-
-
-
 
 
 function sendPasswordResetEmail() {
