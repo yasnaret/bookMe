@@ -5,11 +5,7 @@ function signIn(){
     let password1=document.getElementById("password1").value;
     firebase.auth().signInWithEmailAndPassword(email1, password1)
   .then(function(){
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        window.location.href = 'maps.html';
-      }
-    });
+    window.location.href = 'maps.html';
   })
    .catch(function(error) {
         var errorCode = error.code;
