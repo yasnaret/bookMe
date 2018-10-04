@@ -1,18 +1,26 @@
 #mapContainer {
-  margin: auto;
-  width: 60vw;
-  height: 60vh;
-  position: relative;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 17em;
+    height: 15em;
+    position: relative;
 }
 
 #filterInput {
-  margin-top: 10%;
+    margin-top: 2em;
+    ;
 }
 
 #title {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 10vh;
-  text-align: center;
-  margin: 5%;
-  color: black;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 10vh;
+    text-align: center;
+    margin: 5%;
+    color: black;
+}
+
+#NavBar {
+    align-content: center;
+    margin-bottom: 2em;
+    margin-left: 3em;
 }
