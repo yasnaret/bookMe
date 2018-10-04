@@ -20,11 +20,14 @@ function signInWithGoogle() {
     firebase.auth().signInWithPopup(provider)
         .then(function(result) {
             let user = result.user;
-            db.collection('users').doc(user.uid).collection('datospersonales').add({
+            db.collection('users').doc(user.uid).set({
+                profile:{
                 name: user.displayName,
-                email: user.email
+                email: user.email  
+                }
+                
             }).then(user => {
-                //window.location.href = 'botonera.html';
+                window.location.href = 'botonera.html';
             });
 
         }).catch(function(error) {
@@ -46,9 +49,11 @@ function signInWithFacebook() {
     firebase.auth().signInWithPopup(provider)
         .then(function(result) {
             let user = result.user;
-            db.collection('users').doc(user.uid).collection('datospersonales').add({
+            db.collection('users').doc(user.uid).set({
+                profile:{
                 name: user.displayName,
-                email: user.email
+                email: user.email  
+                }
             }).then(user => {
                 console.log('estas loggeado con fb ')
                 window.location.href = 'botonera.html';
