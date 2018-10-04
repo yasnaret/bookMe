@@ -3,7 +3,7 @@ body {
 }
 
 #donateBtn {
-    margin-left: 4em;
+    margin-left: 3em;
     margin-top: 5em;
     margin-bottom: 3em;
     background-color: #FF8000;
@@ -11,7 +11,7 @@ body {
 }
 
 #adoptBtn {
-    margin-left: 4em;
+    margin-left: 3em;
     margin-bottom: 10em;
     background-color: #007FFF;
     color: white;
