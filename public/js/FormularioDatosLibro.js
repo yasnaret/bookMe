@@ -11,7 +11,7 @@ function donateBook() {
     const title = document.getElementById('bookTitleBox').value;
     const author = document.getElementById('bookAuthorBox').value;
     const place = document.getElementById('place').value;
-    const review = document.getElementById('code').value;
+    const code = document.getElementById('code').value;
 
     db.collection("Libros a Donar").add({
             Title: title,
