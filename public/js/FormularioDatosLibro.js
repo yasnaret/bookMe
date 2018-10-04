@@ -11,13 +11,13 @@ function donateBook() {
     const title = document.getElementById('bookTitleBox').value;
     const author = document.getElementById('bookAuthorBox').value;
     const place = document.getElementById('place').value;
-    const review = document.getElementById('reviewBox').value;
+    const review = document.getElementById('code').value;
 
     db.collection("Libros a Donar").add({
             Title: title,
             Author: author,
             Place: place,
-            Review: review
+            Code: code
 
         })
         .then(function(bookRef) {
@@ -26,7 +26,7 @@ function donateBook() {
             document.getElementById('bookTitleBox').value = '';
             document.getElementById('bookAuthorBox').value = '';
             document.getElementById('place').value = '';
-            document.getElementById('reviewBox').value = '';
+            document.getElementById('code').value = '';
         })
         .catch(function(error) {
 
