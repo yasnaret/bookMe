@@ -3,6 +3,7 @@
 		}
 		
 		#donateBtn {
+		    margin-right: 3em;
 		    margin-left: 3em;
 		    margin-top: 3em;
 		    background-color: #FF8000;
@@ -17,6 +18,7 @@
 		}
 		
 		#adoptBtn {
+		    margin-right: 3em;
 		    margin-left: 3em;
 		    background-color: #007FFF;
 		    color: white;
