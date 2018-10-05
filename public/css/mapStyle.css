@@ -1,18 +1,40 @@
+html,
+body {
+    background-image: url(/public/img/www.kizoa.com_tyler-nix-466138-unsplash.jpg);
+    background-repeat: no-repeat;
+    opacity: 75%;
+}
+
 #mapContainer {
-  margin: auto;
-  width: 60vw;
-  height: 60vh;
-  position: relative;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 330px;
+    height: 400px;
+    position: relative;
 }
 
 #filterInput {
-  margin-top: 10%;
+    margin-top: 2em;
 }
 
 #title {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 10vh;
-  text-align: center;
-  margin: 5%;
-  color: black;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 10vh;
+    text-align: center;
+    margin: 5%;
+    color: black;
+}
+
+#NavBar {
+    align-content: center;
+    margin-bottom: 4em;
+    margin-left: 3em;
+}
+
+#appName {
+    padding-right: 3em;
+}
+
+#navLogo {
+    padding-right: 8em;
 }
