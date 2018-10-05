@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/botonera.css">
+    <link rel="stylesheet" href="./css/botonera.css">
 </head>
 
 <body>
@@ -14,8 +14,8 @@
         <div class="container">
             <div class="row">
 
-                <img src="/public/img/priscilla-du-preez-607171-unsplash.jpg" alt="" srcset="">
-
+                <img id="logoBotonera" src="/public/img/Group 2.1.png" alt="" srcset="">
+                <h4 id="appName">BOOK ME</h4>
             </div>
         </div>
     </section>
@@ -23,20 +23,36 @@
         <div class="container">
             <div class="row">
                 <div class="col12">
-                    <button type="button" id="donateBtn" onclick="redirectTodonateBook()" class="btn btn-primary btn-lg btn-block radius">Dona un libro</button>
-
-                    <button type="button" id="adoptBtn" onclick="redirectToadoptBook()" class="btn btn-secondary btn-lg btn-block">Adopta un libro</button>
+                    <button type="button" id="donateBtn" onclick="javascript:location.href='FormularioDatosLibro.html'" class="btn btn-primary btn-lg btn-block radius">Dona un libro</button>
+                    <label id="DonateTag">Ingresa aca para donar un libro</label>
+                    <button type="button" id="adoptBtn" onclick="javascript:location.href='maps.html'" class="btn btn-secondary btn-lg btn-block">Adopta un libro</button>
+                    <label id="adoptTag">Ingresa aca para encontrar libros cerca de ti</label>
                 </div>
 
             </div>
 
         </div>
     </section>
-
+    <!--firestore-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyC7nuA5-QZDkhNnH6FBxoepllvmtkqDuMo",
+            authDomain: "bookme-78399.firebaseapp.com",
+            databaseURL: "https://bookme-78399.firebaseio.com",
+            projectId: "bookme-78399",
+            storageBucket: "bookme-78399.appspot.com",
+            messagingSenderId: "383280310031"
+        };
+        firebase.initializeApp(config);
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="../public/js/botonera.js"></script>
+   
 </body>
 
 </html>

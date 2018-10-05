@@ -121,40 +121,21 @@ function register() {
   // Registro de Usuario (NUEVO) con FIREBASE
   firebase.auth().createUserWithEmailAndPassword(emailRegister, passwordRegister)
   .then(function(){
-    verificando();
+    let user = result.user;
+         firebase.database().ref('users/' + user.uid).set({
+          name: username,
+          email:emailRegister,
+          nickname:nickname
+           }).then(user => {
+             console.log ('estas loggeado con fb ')
+             window.location.href = 'index2.html';
+           });
 
     }).catch(function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
       console.error(error)
+      noValidarRegistroFallido()
     });
 
-    // observador en el objeto Auth:
-  firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-      firebase.database().ref('users/' + user.uid).set({
-        name: username,
-        email:emailRegister,
-        nickname:nickname,
-        profilePhoto:"url(https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png)"
-      }).then(user => {
-        window.location.href = 'index.html';
-      }); 
 
-    } else {
-      console.error('Registration failed.');
-      noValidarRegistroFallido()
-    }
-    })
-
-  function verificando() {
-    let user = firebase.auth().currentUser;
-    user.sendEmailVerification()
-      .then(function () {
-        console.log('enviando email')
-      }).catch(function (error) {
-        console.log(error)
-      });
-  }
 }
 

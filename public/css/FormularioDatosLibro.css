@@ -1,30 +1,30 @@
-html,
-body {
-    background-image: url(/public/img/www.kizoa.com_tyler-nix-466138-unsplash.jpg);
-    background-repeat: no-repeat;
-    opacity: 75%;
-}
-
-#NavBar {
-    align-content: center;
-    margin-bottom: 6em;
-    margin-left: 3em;
-}
-
-#DonationForm {
-    align-content: center;
-    margin-left: 5em;
-}
-
-#confirmDonate {
-    padding-right: 6em;
-    padding-left: 6em;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    background-color: #FF8000;
-    border: #FF8000;
-}
-
-#appName {
-    padding-right: 3em;
-}
+    html,
+    body {
+        background-image: url('../img/www.kizoa.com_tyler-nix-466138-unsplash.jpg');
+        background-repeat: no-repeat;
+        opacity: 75%;
+    }
+    
+    #NavBar {
+        align-content: center;
+        margin-bottom: 6em;
+        margin-left: 3em;
+    }
+    
+    #DonationForm {
+        align-content: center;
+        margin-left: 4em;
+    }
+    
+    #confirmDonate {
+        padding-right: 6em;
+        padding-left: 5em;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        background-color: #FF8000;
+        border: #FF8000;
+    }
+    
+    #navLogo {
+        padding-right: 8em;
+    }

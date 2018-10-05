@@ -1,8 +1,15 @@
+html,
+body {
+    background-image: url('../img/www.kizoa.com_tyler-nix-466138-unsplash.jpg');
+    background-repeat: no-repeat;
+    opacity: 75%;
+}
+
 #mapContainer {
     margin-left: 1em;
     margin-right: 1em;
     width: 330px;
-    height: 270px;
+    height: 400px;
     position: relative;
 }
 
@@ -26,4 +33,8 @@
 
 #appName {
     padding-right: 3em;
+}
+
+#navLogo {
+    padding-right: 8em;
 }
