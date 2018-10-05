@@ -79,7 +79,7 @@ function initMap() {
     initUi();
     displayDefaultMarker()
   
-  addingMarkers();
+  
 
  
 }

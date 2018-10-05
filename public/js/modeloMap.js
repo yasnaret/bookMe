@@ -39,6 +39,14 @@ function addInfoBubble(map) {
       lng: Object.entries(placesList)[1][1],
       lat: Object.entries(placesList)[0][1],
     },
-    "<h3>BookMe </h3>");
+  `<div class="module">
+  <h6>Libros Para Adoptar Disponibles!</h6>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Ver Listado
+  </button>
+  </div>`
+    
+  );
 
 };
+
