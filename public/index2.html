@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BookMe</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="login-form">
+        <form id="formLogin" action="/examples/actions/confirmation.php" method="post">
+            <div id="centrador">
+                <h3 class='LoginTitle'>Login</h3>
+            </div>
+
+            <div class="or-seperator"></div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <input type="email" class="form-control" id="email1" placeholder="Ingresa tu e-mail" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu e-mail." required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <input type="password" class="form-control" id="password1" placeholder="Ingresa tu contraseña" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu contraseña." required>
+                </div>
+                <div class="clearfix">
+                    <label class="pull-left checkbox-inline">
+                        <!-- <input type="checkbox"> Recuerdame</label> -->
+                </div>
+                <div class="or-seperator"></div>
+            </div>
+            <div class="Sign-In">
+                <button type="submit" class="btn btn-info btn-block login-btn" onclick="signIn()">Ingresa</button>
+                <a href="#" class="forgot" onclick="sendPasswordResetEmail()">Olvidaste tu Contraseña?</a>
+            </div>
+            <div class="or-seperator"></div>
+            <div class="separador">
+
+                <a href="registro.html" class="btn btn-info btn-block login-btn">Registrate</a>
+            </div>
+
+            <div class="text-center social-btn">
+                <div class="separador">
+                    <a onclick="signInWithFacebook()" class="btn btn-primary btn-block">
+                        <i class="fa fa-facebook"></i> Ingresa con
+                        <b>Facebook</b>
+                    </a>
+                </div>
+                <div class="separador">
+                    <a onclick="signInWithGoogle()" class="btn btn-danger btn-block">
+                        <i class="fa fa-google"></i> Ingresa con
+                        <b>Google</b>
+                    </a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- conexion a Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-auth.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyC7nuA5-QZDkhNnH6FBxoepllvmtkqDuMo",
+            authDomain: "bookme-78399.firebaseapp.com",
+            databaseURL: "https://bookme-78399.firebaseio.com",
+            projectId: "bookme-78399",
+            storageBucket: "bookme-78399.appspot.com",
+            messagingSenderId: "383280310031"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./js/loginv2.js"></script>
+
+
+</body>

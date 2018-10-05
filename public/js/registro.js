@@ -128,7 +128,7 @@ function register() {
           nickname:nickname
            }).then(user => {
              console.log ('estas loggeado con fb ')
-             window.location.href = 'index.html';
+             window.location.href = 'index2.html';
            });
 
     }).catch(function (error) {
