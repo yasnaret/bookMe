@@ -40,6 +40,13 @@ var mapOptions = {
 let defaultLayers = platform.createDefaultLayers();
 let mapPlaceholder = document.getElementById('mapContainer');
 
+//add markers into heremaps on init
+function displayDefaultMarker() {
+  let homeIcon = new H.map.Icon('./img/marker.png');
+  let Laboratoria = new H.map.Marker({lat:-33.4190702,lng:-70.6418162},{icon:homeIcon});
+  map.addObject(Laboratoria);
+}
+
 function initMap() {
   // Se inicializa el mapa
   // Inicializa el mapa
@@ -47,10 +54,13 @@ function initMap() {
     mapPlaceholder,
     defaultLayers.normal.map,
     mapOptions);
-
-  var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map)); // mueve el mapa, lo hace interactivo
-  initUi();
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map)); // mueve el mapa, lo hace interactivo
+    initUi();
+    displayDefaultMarker()
+  
   addingMarkers();
+
+ 
 }
 // Agrego un marcador
 
@@ -183,6 +193,7 @@ searchBtn.addEventListener('click', () => {
         lat: Object.entries(placesList)[0][1],
       }
       map.setCenter(coordsMarkers);
+      document.getElementById('inputSearching').value = '';
 
     }).catch(function (e) {
       console.log(e); // "oh, no!"

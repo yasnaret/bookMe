@@ -19,7 +19,6 @@ function addInfoBubble(map) {
     lng: Object.entries(placesList)[1][1],
     lat: Object.entries(placesList)[0][1],
   };
-  console.log(coords.lat);
   map.addObject(group);
 
   // add 'tap' event listener, that opens info bubble, to the group
@@ -40,6 +39,6 @@ function addInfoBubble(map) {
       lng: Object.entries(placesList)[1][1],
       lat: Object.entries(placesList)[0][1],
     },
-    "<h4>hola</h4>");
+    "<h3>BookMe </h3>");
 
 };
