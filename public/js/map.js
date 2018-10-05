@@ -44,7 +44,28 @@ let mapPlaceholder = document.getElementById('mapContainer');
 function displayDefaultMarker() {
   let homeIcon = new H.map.Icon('./img/marker.png');
   let Laboratoria = new H.map.Marker({lat:-33.4190702,lng:-70.6418162},{icon:homeIcon});
-  map.addObject(Laboratoria);
+  let Cafe1= new H.map.Marker({lat:-33.437972,lng:-70.625154},{icon:homeIcon});
+  let Cafe2= new H.map.Marker({lat:-33.423763,lng:-70.697334110},{icon:homeIcon});
+  let Cafe3= new H.map.Marker({lat:-33.416695142517,lng:-70.57477276077},{icon:homeIcon});
+  let Cafe4= new H.map.Marker({lat:-33.41831292672792,lng:-70.65637138999381},{icon:homeIcon});
+  let Cafe5= new H.map.Marker({lat:-33.44063527065713,lng:-70.68234340023335},{icon:homeIcon});
+  let Cafe6= new H.map.Marker({lat:-33.452346253623176,lng:-70.70674642090265},{icon:homeIcon});
+  let Cafe7= new H.map.Marker({lat:-33.44037863058748,lng:-70.62204665614709},{icon:homeIcon});
+  let Cafe8= new H.map.Marker({lat:-33.40834903465222,lng:-70.63852143876755},{icon:homeIcon});
+  let Cafe9= new H.map.Marker({lat:-33.451052536170785,lng:-70.6356141241848},{icon:homeIcon});
+  let Cafe10= new H.map.Marker({lat:-33.455257047408125,lng:-70.61681348990942},{icon:homeIcon});
+  map.addObject( Cafe1);
+  map.addObject( Cafe2);
+  map.addObject( Cafe3);
+  map.addObject( Cafe4);
+  map.addObject( Cafe5);
+  map.addObject( Cafe6);
+  map.addObject( Cafe7);
+  map.addObject( Cafe8);
+  map.addObject( Cafe9);
+  map.addObject( Cafe10);
+  map.addObject( Laboratoria);
+  
 }
 
 function initMap() {
