@@ -68,10 +68,44 @@
                             <textarea type="number" class="form-control" id="code" placeholder="Codigo de Barras"></textarea>
                         </div>
                     </form>
-                    <button type="submit" id="confirmDonate" onclick="donateBook()" class="btn btn-primary">Donar</button>
+                    <button  data-toggle="modal" data-target="#basicModal" type="submit" id="confirmDonate" onclick="donateBook()" class="btn btn-primary">Donar</button>
                 </div>
             </div>
         </div>
+        
+        <!-- modal -->
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="
+                    background-color: #d3d3d347">
+                        <div class="row">
+                         <div class="col-2">
+                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                         </div> 
+                         <div class="col-10">
+                             <h5 class="modal-title" id="myModalLabel">Personas como tú hacen el cambio!</h5>
+                        </div>   
+                        </div>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <h4>Muchas Gracias!</h4>
+                        <span></span>
+                        <span style="color:grey">Tu libro quedará en muy buenas manos</span>
+                        <span></span>
+                        <span style="color:grey">Agradecimientos del equipo de BookMe</span>
+                    </div>
+                    <div class="modal-footer" style="
+                    background-color: #d3d3d347">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" style='background-color: #FF8000;color: white;'>Aceptar</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
     <!-- scripts -->
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
