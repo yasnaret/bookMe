@@ -1,3 +1,3 @@
 window.setTimeout(function() {
-    location = "index.html";
+    location = "index2.html";
 }, 3000);
